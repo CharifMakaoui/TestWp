@@ -163,9 +163,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        Xaamin\Whatsapi\WhatsapiServiceProvider::class ,
-
-        \Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class
+        Xaamin\Whatsapi\WhatsapiServiceProvider::class
 
     ],
 

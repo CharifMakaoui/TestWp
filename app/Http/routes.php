@@ -17,12 +17,10 @@ Route::group(['middleware' => 'api'],function (){
         return response()->view('welcome');
     });
 
-    Route::get('/register', function ($number,$type = 'sms') {
-
-        $response = WhatsapiTool::requestCode($number, $type);
-
-        return response()->json(compact('response'));
-    });
+    Route::get('/register', [
+        'as' => 'register_number',
+        'uses' => 'WhatsApi@register'
+    ]);
 
 });
 

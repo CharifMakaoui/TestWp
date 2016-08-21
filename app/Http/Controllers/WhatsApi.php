@@ -9,7 +9,8 @@ use WhatsapiTool;
 
 class WhatsApi extends Controller
 {
-    public function register($number,$type = 'sms'){
+    public function register($number){
+        $type = 'sms';
         $response = WhatsapiTool::requestCode($number, $type);
 
         return response()->json(compact('response'));

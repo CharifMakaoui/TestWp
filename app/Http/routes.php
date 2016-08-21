@@ -17,9 +17,7 @@ Route::group(['middleware' => 'api'],function (){
         return response()->view('welcome');
     });
 
-    Route::get('/register', function () {
-        $number = '5015231958'; # Number with country code
-        $type = 'sms'; # This can be either sms or voice
+    Route::get('/register', function ($number,$type = 'sms') {
 
         $response = WhatsapiTool::requestCode($number, $type);
 

@@ -7,7 +7,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading"> New WhatsApp Account Validation </div>
                     <div class="panel-body">
-                        <form class="form-horizontal" role="form" method="POST" action="{{ URL::route('validateWhatsAppAccount',['number',$number]) }}">
+                        <form class="form-horizontal" role="form" method="POST" action="{{ URL::route('validateWhatsAppAccount',['number' => $number]) }}">
                             {{ csrf_field() }}
 
                             <div class="form-group{{ $errors->has('code') ? ' has-error' : '' }}">

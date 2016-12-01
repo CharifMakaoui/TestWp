@@ -163,7 +163,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        Xaamin\Whatsapi\WhatsapiServiceProvider::class
+        Xaamin\Whatsapi\WhatsapiServiceProvider::class,
+
+        Propaganistas\LaravelPhone\LaravelPhoneServiceProvider::class
 
     ],
 
@@ -213,6 +215,7 @@ return [
 
         'Whatsapi' => Xaamin\Whatsapi\Facades\Laravel\Whatsapi::class,
         'WhatsapiTool' => Xaamin\Whatsapi\Facades\Laravel\Registration::class,
+
     ],
 
 ];

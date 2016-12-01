@@ -6,21 +6,27 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'api_token', 'password',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
+
     protected $hidden = [
-        'password', 'remember_token',
+        'api_token', 'password', 'remember_token',
     ];
+
+    public function whatsAccounts(){
+        return $this->hasMany('App\WhatsAccount');
+    }
+
+    public function randWhatsAccount(){
+        return $this->whatsAccounts()
+            ->orderByRaw("RAND()")
+            ->take(1);
+    }
+
+    public function Clients(){
+        return $this->hasMany('App\Client');
+    }
 }

@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class WhatsAccount extends Model
 {
+    protected $primaryKey = "login";
+
     protected $fillable = [
         'user_id',
         'login',

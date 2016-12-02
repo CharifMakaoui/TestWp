@@ -6,6 +6,10 @@ Route::group(['prefix' => '/','middleware' => ['web']], function () {
         return response()->view('welcome');
     });
 
+    Route::get('/php',function (){
+        phpinfo();
+    });
+
     Route::auth();
 
     Route::get('me/accounts', ['as' => 'allMyWhatsAppAccounts' , 'uses' => 'web\whatsAccounts_controller@index']);

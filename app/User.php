@@ -22,7 +22,7 @@ class User extends Authenticatable
 
     public function randWhatsAccount(){
         return $this->whatsAccounts()
-            ->orderByRaw("RAND()")
+            ->orderByRaw("random()")
             ->take(1);
     }
 

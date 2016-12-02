@@ -61,7 +61,7 @@ class whatsAccounts_controller extends Controller
 
                     $account->saveOrFail();
 
-                    return response()->redirectTo('/accounts');
+                    return response()->redirectTo('me/accounts');
                 }
             }
             catch (Exception $exception){

@@ -15,7 +15,7 @@ Route::group(['prefix' => '/','middleware' => ['web']], function () {
     Route::get('me/accounts', ['as' => 'allMyWhatsAppAccounts' , 'uses' => 'web\whatsAccounts_controller@index']);
 
     Route::get('me/accounts/new', ['as' => 'newAccountWhatsApp', 'uses' => 'web\whatsAccounts_controller@send_to_get_validation_view']);
-    Route::post('/accounts/new', ['as' => 'newWhatsAppAccount', 'uses' => 'web\whatsAccounts_controller@send_to_get_validation']);
+    Route::post('me/accounts/new', ['as' => 'newWhatsAppAccount', 'uses' => 'web\whatsAccounts_controller@send_to_get_validation']);
 
     Route::get('me/accounts/activate/{number}', ['as' => 'validateWhatsAppAccount_view', 'uses' => 'web\whatsAccounts_controller@send_validate_account_view']);
     Route::post('me/accounts/activate/{number}', ['as' => 'validateWhatsAppAccount', 'uses' => 'web\whatsAccounts_controller@send_validate_account']);

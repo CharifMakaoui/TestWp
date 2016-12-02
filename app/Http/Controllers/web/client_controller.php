@@ -16,6 +16,7 @@ use Redirect;
 use SyncResult;
 use URL;
 use WhatsProt;
+use Xaamin\Whatsapi\Facades\Laravel\Whatsapi;
 
 class client_controller extends Controller
 {
@@ -99,14 +100,14 @@ class client_controller extends Controller
 
         //return response()->json($account);
 
+        $result = Whatsapi::syncContacts([$number]);
 
-        $wa = new WhatsProt($account[0]->login, $user->name, false);
+        dd($result);
 
-        $wa->connect();
-        $wa->loginWithPassword($account[0]->pw);
+        foreach ($result->existing as $number => $account)
+        {
 
-        //$wa->sendSync($number);
+        }
 
-        var_dump($wa);
     }
 }

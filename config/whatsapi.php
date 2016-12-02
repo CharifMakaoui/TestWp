@@ -32,9 +32,9 @@ return [
      */
     'accounts'    => array(
         'default'   => array(
-            'nickname' => 'Itnovado',
-            'number'   => '5219512132132',
-            'password' => '==87Vf4plh+lvOAvoURjBoKDKwciw='
+            'nickname' => 'Aqua',
+            'number'   => '15012708426',
+            'password' => 'iKaAcj38/ZsLa/G3PYrZsORcS8s'
         ),
         /*
         'another'    => array(

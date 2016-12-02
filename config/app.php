@@ -165,7 +165,7 @@ return [
 
         Xaamin\Whatsapi\WhatsapiServiceProvider::class,
 
-        Propaganistas\LaravelPhone\LaravelPhoneServiceProvider::class
+        Propaganistas\LaravelPhone\LaravelPhoneServiceProvider::class,
 
     ],
 

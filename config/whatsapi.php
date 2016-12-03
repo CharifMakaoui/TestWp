@@ -34,7 +34,7 @@ return [
         'default'   => array(
             'nickname' => 'Aqua',
             'number'   => '15012708426',
-            'password' => 'iKaAcj38/ZsLa/G3PYrZsORcS8s'
+            'password' => 'rEURRvPMxLVzj/pVtUVMwOiNFQY='
         ),
         /*
         'another'    => array(
